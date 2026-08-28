@@ -256,6 +256,7 @@
                             id="student_id"
                             name="student_id"
                             placeholder="Enter student ID"
+                            required
                         >
                     </div>
 
@@ -270,6 +271,7 @@
                             id="email"
                             name="email"
                             placeholder="student@example.com"
+                            required
                         >
                     </div>
 
@@ -298,6 +300,7 @@
                             id="first_name"
                             name="first_name"
                             placeholder="Enter first name"
+                            required
                         >
                     </div>
 
@@ -325,6 +328,7 @@
                             id="last_name"
                             name="last_name"
                             placeholder="Enter last name"
+                            required
                         >
                     </div>
 
@@ -339,6 +343,7 @@
                             id="mobile_number"
                             name="mobile_number"
                             placeholder="Enter mobile number"
+                            required
                         >
                     </div>
 
@@ -352,6 +357,7 @@
                             type="date"
                             id="date_of_birth"
                             name="date_of_birth"
+                            required
                         >
                     </div>
 
@@ -364,6 +370,7 @@
                         <select
                             id="gender"
                             name="gender"
+                            required
                         >
                             <option value="">
                                 Select gender
@@ -412,6 +419,7 @@
                             id="program"
                             name="program"
                             placeholder="Enter academic program"
+                            required
                         >
                     </div>
 
@@ -421,13 +429,15 @@
                             <span class="required">*</span>
                         </label>
 
-                        <input
-                            type="number"
-                            id="year_level"
-                            name="year_level"
-                            min="1"
-                            placeholder="Enter year level"
-                        >
+                        <select id="year_level" name="year_level" required>
+                        <option value="" disabled selected>Select year level</option>
+                        <option value="1" {{ old('year_level') == '1' ? 'selected' : '' }}>1st Year</option>
+                        <option value="2" {{ old('year_level') == '2' ? 'selected' : '' }}>2nd Year</option>
+                        <option value="3" {{ old('year_level') == '3' ? 'selected' : '' }}>3rd Year</option>
+                        <option value="4" {{ old('year_level') == '4' ? 'selected' : '' }}>4th Year</option>
+                        <option value="5" {{ old('year_level') == '5' ? 'selected' : '' }}>5th Year</option>
+                        <option value="6" {{ old('year_level') == '6' ? 'selected' : '' }}>6th Year</option>
+                        </select>
                     </div>
 
                 </div>
@@ -454,6 +464,7 @@
                             id="address"
                             name="address"
                             placeholder="Enter complete address"
+                            required
                         ></textarea>
                     </div>
 
@@ -468,6 +479,7 @@
                             id="profile_picture"
                             name="profile_picture"
                             accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+                            required
                         >
 
                         <span class="field-note">
