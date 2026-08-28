@@ -38,7 +38,7 @@ class StudentController extends Controller
             'email' => 'required|email|unique:students,email',
             'mobile_number' => 'required|numeric',
 
-            'date_of_birth' => 'required|date',
+            'date_of_birth' => 'required|date|before_or_equal:today',
             'gender' => 'required',
 
             'program' => 'required',

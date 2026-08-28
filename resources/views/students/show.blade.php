@@ -714,7 +714,7 @@
                         </span>
 
                         <span class="info-value">
-                            {{ $student->date_of_birth }}
+                            {{ $student->date_of_birth->format('F j, Y') }}
                         </span>
 
                     </div>
